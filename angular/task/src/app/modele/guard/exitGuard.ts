@@ -1,35 +1,24 @@
-import {CanDeactivate} from "@angular/router";
-
-import {CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot} from "@angular/router";
-import {Observable} from "rxjs";
-
-import { FormComponent } from "src/app/form/form.component";
-
-
+import { CanDeactivate } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
- 
 
-
-export interface ComponentCanDeactivate{
-    canDeactivate: () => boolean | Observable<boolean>;
+export interface ComponentCanDeactivate {
+  canDeactivate: () => boolean | Observable<boolean>;
 }
 @Injectable()
-export class ExitAboutGuard implements CanDeactivate<ComponentCanDeactivate>{
+export class ExitAboutGuard implements CanDeactivate<ComponentCanDeactivate> {
+  bool = false;
+  foo() {
+    this.bool = true;
+  }
 
-    
-
-    
-
-    bool=false
-    foo(){ this.bool =true  }
-
-
- 
-    canDeactivate(component: ComponentCanDeactivate) : Observable<boolean> | boolean{
-
-        if( this.bool){ return confirm('Вы уверены, что хотите перейти и утерять данные ?')}else{return true}
-  
-         
+  canDeactivate(
+    component: ComponentCanDeactivate
+  ): Observable<boolean> | boolean {
+    if (this.bool) {
+      return confirm('Вы уверены, что хотите перейти и утерять данные ?');
+    } else {
+      return true;
     }
+  }
 }

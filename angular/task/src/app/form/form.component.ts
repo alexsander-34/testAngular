@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
-
-import {  Output, ViewChild, EventEmitter } from '@angular/core';
+import { Output, ViewChild, EventEmitter } from '@angular/core';
 import {
   AngularFirestore,
   AngularFirestoreCollection,
@@ -20,7 +19,6 @@ export interface Team {
   date: string;
   tags: { tag: string }[];
 }
-
 
 @Component({
   selector: 'app-form',
@@ -129,4 +127,3 @@ export class FormComponent implements OnInit {
     });
   }
 }
-
