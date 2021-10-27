@@ -1,0 +1,151 @@
+<div class="body">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <form #form="ngForm" (submit)="submit()">
+
+
+
+        <div class="preview" *ngIf="url; else showLogin">
+            <div class="preview-image">
+                <img [src]="url" class="img"> <br />
+                <div class="preview_remove" (click)="remodeImg()">x</div>
+            </div>
+        </div>
+
+
+
+
+        <ng-template #showLogin>
+            <input type='file' (change)="onSelectFile($event)" id="contained-button-file">
+            <label For="contained-button-file">
+                <div class="btn">
+                </div>
+            </label>
+        </ng-template>
+        <div class="titile">
+            <label for="Titlt_input" class="text_title">Enter the title of your article</label>
+            <input type="text" id="Titlt_input" name="title" [(ngModel)]="model.title" required minlength="4"
+                #titile="ngModel" [ngClass]="{'titleInvalid': titile.invalid && titile.touched}" />
+        </div>
+        <div *ngIf="titile.invalid && (titile.dirty || titile.touched)" class="alert">
+
+            <div *ngIf="titile.errors?.required">
+                Title is required.
+            </div>
+            <div *ngIf="titile.errors?.minlength">
+                Title must be at least 4 characters long.
+            </div>
+
+
+        </div>
+
+
+        <fieldset *ngFor="let contents of model.content; let memberIndex = index" class="subTitile">
+
+
+            <label for="contents.id">
+                <div class="text_subTitle">Addition of Dependency Injection</div>
+            </label>
+
+            <input [id]="contents.id" class="subTitlt_input" type="text" [name]="' '+contents.id"
+                [(ngModel)]="contents.subTitle" required #subTitle="ngModel"
+                [ngClass]="{'titleInvalid':subTitle.invalid && subTitle.touched }" />
+            <label for="contents.id">
+                <div class="text_story">Tell your story...</div>
+            </label>
+
+            <textarea [id]="contents.id" class="story_input" [name]="'d '+contents.id" [(ngModel)]="contents.text"
+                required #story="ngModel" [ngClass]="{'titleInvalid':story.invalid && story.touched }"></textarea>
+
+
+
+
+
+
+
+        </fieldset>
+
+        <div class="buttonAdd" id="buttonAdd"><button class="add" (click)="addClicked()"><img
+                    src="assets/images/Button.png" /></button></div>
+        <div class="AllTegsText">Add tag information</div>
+        <div class="tags" id="tags">
+            <div id="tag" class="tag " *ngFor="let teg of tags$ | async" (click)="addteg($event)">
+                <div class="tag_text">
+                    {{ teg.tagsList.tag}}
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="addTagAndSerch">
+
+            <div class="tag turnon " *ngFor="let teg of tags">
+                <div class="tag_text">{{teg.tag}} </div>
+
+
+            </div>
+
+            <!-- <input class="inputTag" type="text"> -->
+        </div>
+
+
+
+
+
+
+        <div class="TabBar">
+            <button id="preview"> preview</button>
+            <button id="pablish" (click)="submit"> pablish </button>
+
+        </div>
+
+
+
+        <!-- <button>Submit Form</button> -->
+
+
+
+        <!-- <div class="flex space-x-4">
+            <div class="flex-1">
+                <h2>Form States</h2>
+            </div>
+            <div class="flex-1">
+                <h2>Form Value</h2>
+                <pre>{{ form.form.value | json }}</pre>
+            </div>
+            <div class="flex-1">
+                <h2>Data Model</h2>
+                <pre>{{ model | json }}</pre>
+            </div>
+        </div> -->
+
+
+
+    </form>
+
+</div>

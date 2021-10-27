@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "curs-df320": {
+      "hosting": {
+        "task": [
+          "curs-df320"
+        ]
+      }
+    }
+  }
+}

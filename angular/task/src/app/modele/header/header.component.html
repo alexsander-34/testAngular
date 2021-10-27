@@ -1,0 +1,35 @@
+<header class="header">
+    <div class="logo" routerLink="">
+        <div class="image1">
+        </div>
+    </div>
+
+ 
+  
+        <div *ngIf="auth.user | async as user; else showLogin">
+        <div class="createPost" id="createPost" routerLink="/form">
+            <div class="text_createPost ">
+                Create Post
+            </div>
+        </div>
+        <div class="auth" id="auth"> <img src="{{user.photoURL}} "alt= "" id="auth_img"></div>
+        <div class="logOut" id="logOut" (click)="logout()"> <img src="assets/images/logout.png" alt="ггг"
+                class="logOut_img">
+            
+        </div>
+    </div>
+
+  <ng-template #showLogin>
+    <div class="button" id="button" routerLink="/auth" >
+      
+        <div class="sign_up">
+            Sign In
+        </div>
+    </div>
+
+    </ng-template>
+
+
+
+
+</header>

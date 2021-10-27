@@ -1,0 +1,80 @@
+<!-- <p>home works!</p>
+
+
+<ul>
+    
+    <li *ngFor="let item of item$ | async">
+    {{ item.articlrList.tags[0].tag }}
+   {{ item.articlrList.date}}
+ 
+    
+  </li>    
+    </ul> -->
+
+
+
+    <div class="context">
+        <div class="bgr_context">
+        </div>
+        <div class="text_context">
+            <div class="group_context">
+                <div class="text1_context">
+                    LEVERX GROUP
+                </div>
+                <div class="text2_context">
+                    The profession of a programmer is one of the most demanded in the IT field today. Programming training at LeverX Group is an excellent opportunity to gain practical knowledge in the most relevant areas in this area and build a successful career in our
+                    company.
+                </div>
+                <div class="text3_context">
+                    Free courses from
+                </div>
+                <div class="button_context">
+                    <div class="button_text_context">
+                        Start Now
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="body_content">
+        <div class="title">
+            Interesting articles by LeverX Group
+
+        </div>
+
+        <input type="text " placeholder="      Search articles" class="search" id="search" [(ngModel)]="searchText"   (ngModelChange)="fff()">
+        <div class="tags" id="tags"   >
+            <div class="tag " *ngFor="let teg of tags$ | async" (click)="chengeTeg($event)" >
+            <div class="tag_text" >
+
+                {{ teg.tagsList.tag}}
+                
+                </div>
+         </div>
+
+
+
+
+        </div>
+        <div class="articles">
+            <div class="frame_articles" id="frame_articles">
+                <div class="frame0_articles" *ngFor="let item of item$ | async |nameFilter : searchText : tagonList "[routerLink]="['articleAuthorized', item.articlrList.id]">
+                    <div class="img_articles"   style='background:url({{item.articlrList.img}});'>
+                    </div >
+                    <div class="frame1_articles">
+                        <div class="title_articles">{{item.articlrList.title}} </div>
+                        <div class="text_articles">{{item.articlrList.content[0].text.substr(0,100)}}</div>
+                    </div>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+
+   
+
+    </div>
+    <app-footer></app-footer>
+
+   

@@ -1,0 +1,24 @@
+<div class="body">
+    <div id="content" *ngFor="let item of item$ | async|article">
+        <img class="img" src="{{item.articlrList.img}}">
+        <div class="title">{{item.articlrList.title}}</div>
+        <div *ngFor="let key of object.keys(item.articlrList.content);let i=index ">
+            
+
+            <div class="subTitle">{{ item.articlrList.content[i].subTitle}}</div>
+            <div class="text">{{ item.articlrList.content[i].text}}</div>
+        </div>
+        
+        <div class="line"></div>
+        <div class="dataAndAuthor">
+            <div class="author">{{item.articlrList.author}}</div>
+            <div class="date">{{item.articlrList.date}}</div>
+        </div>
+        <div class="tags">
+            <div class="tag" *ngFor="let key of object.keys(item.articlrList.tags);let j=index ">
+                <div class="tag_text'">{{item.articlrList.tags[j].tag}} </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

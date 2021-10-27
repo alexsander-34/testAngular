@@ -1,0 +1,318 @@
+.context {
+    position: relative;
+    width: 1440px;
+    height: 572px;
+   margin: auto;
+}
+
+.bg_context {
+    position: absolute;
+    width: 1440px;
+    height: 576px;
+    left: 0px;
+    top: 0px;
+    margin: auto;
+    background: #0054C5;
+}
+
+
+.text1_context {
+    /* The Design Thinking */
+    /* The Design Thinking */
+    position: absolute;
+    width: 467px;
+    height: 78px;
+    left: 144px;
+    top: 122px;
+    /* H2 Caps */
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 130%;
+    /* identical to box height, or 78px */
+    letter-spacing: 0.03em;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    /* Yellow 1 */
+    color: #F2C94C;
+}
+
+.text2_context {
+    /* Tools, tutorials, de */
+    position: absolute;
+    width: 496px;
+    height: 120px;
+    left: 144px;
+    top: 224px;
+    /* H6 */
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    /* or 133% */
+    letter-spacing: 0.0075em;
+    /* White */
+    color: #FFFFFF;
+}
+
+.text3_context {
+    /* The Design Thinking */
+    position: absolute;
+    width: 270px;
+    height: 44px;
+    left: 144px;
+    top: 80px;
+    /* H4 */
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 44px;
+    /* identical to box height, or 129% */
+    /* White */
+    color: #FFFFFF;
+}
+
+.button_context {
+    /* Button */
+    /* Auto Layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 40px;
+    position: absolute;
+    left: 10.49%;
+    right: 79.44%;
+    top: 68.99%;
+    bottom: 22.65%;
+    /* Yellow 1 */
+    background: #F2C94C;
+    border-radius: 24px;
+}
+
+.button_text_context {
+    /* Sign In */
+    position: static;
+    width: 79px;
+    height: 24px;
+    left: 33px;
+    top: 11.92px;
+    /* Button */
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 150%;
+    /* identical to box height, or 24px */
+    text-align: center;
+    letter-spacing: 0.05em;
+    /* Gray 1 */
+    color: #333333;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+}
+
+.bgr_context {
+    position: absolute;
+    width: 1440px;
+    height: 576px;
+    left: 0px;
+    top: 0px;
+    background: url("/assets/images/bgr.jpg" );
+    background-blend-mode: soft-light;
+}
+
+.body {
+    position: relative;
+    width: 1440px;
+    min-height: 1100px;
+    margin: auto;
+    /* Gray 6 */
+    background: #F2F2F2;
+    padding-bottom: 40px;
+}
+.body_content{
+    position: relative;
+    width: 1152px;
+    margin: auto;
+}
+.title {
+    position: relative;
+    width: 536px;
+    height: 44px;
+    padding :70px 0 50px 0;
+
+    /* H4 */
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 44px;
+    /* identical to box height, or 129% */
+    display: flex;
+    align-items: center;
+    /* Gray 1 */
+    color: #333333;
+}
+
+.search {
+    position: relative;
+    width: 920px;
+    height: 60px;
+  
+    background: #FFFFFF;
+    /* Search */
+    box-shadow: 0px -6px 8px rgba(234, 237, 242, 0.5), 0px 6px 8px rgba(210, 212, 216, 0.5);
+    border-radius: 40px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    border: 1px solid #eaeaea;
+    padding: 5px 20px;
+    font-size: 24px;
+    outline: none;
+}
+.search:focus {
+    border: 2px solid #555;
+}
+
+.tags {
+    /* Tags */
+    /* Auto Layout */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+  position: relative;
+    width: 1102px;
+    height: 36px;
+    margin: 40px 0 40px 0;
+   
+    background-color: #F2F2F2;
+
+   
+}
+
+.tag {
+    /* Auto Layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+    position: static;
+    left: 90.93%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    /* White */
+    background: #FFFFFF;
+    /* Shadow */
+    box-shadow: 0px 6px 8px rgba(234, 237, 242, 0.5);
+    border-radius: 40px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 8;
+    flex-grow: 0;
+    margin: 12px 12px;
+}
+
+.turnon {
+    background: #2F80ED;
+    color: white;
+}
+
+
+/* /////////////////////////////////////////////////////////////article */
+
+.articles {
+   
+    width: 1152px;
+    padding: 0 0;
+    position: relative;
+    margin: auto;
+    display: inline-block;
+    justify-content: space-between;
+}
+
+.frame_articles {
+    position: relative;
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    min-height: 400px;
+    
+    /* White */
+}
+
+.frame0_articles {
+    list-style-type: none;
+    background: #FFFFFF;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 270px;
+    height: 352px;
+    /* Shadow */
+    box-shadow: 0px 6px 8px rgba(234, 237, 242, 0.5);
+    border-radius: 15px;
+}
+
+.frame1_articles {
+    width: 238px;
+    height: 108px;
+    margin: 0 16px;
+}
+
+.title_articles {
+    /* position: static; */
+    width: 238px;
+    min-height: 24px;
+    left: 0px;
+    top: 0px;
+    /* H6 */
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    margin: 8px 0;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 24px;
+    color: #333333;
+}
+
+.text_articles {
+    width: 238px;
+    left: 0px;
+    top: 32px;
+    /* Body 2 */
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 142%;
+    /* or 20px */
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.0168em;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    /* Gray 2 */
+    color: #4F4F4F;
+}
+
+.img_articles {
+    height: 196px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    border-radius: 15px 15px 0 0;
+}
+

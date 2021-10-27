@@ -1,0 +1,111 @@
+
+.footer {
+    
+    position: relative;
+    width: 1440px;
+    height: 80px;
+    vertical-align: middle;
+    margin: auto;
+    /* Gray 1 */
+    background: #333333;
+}
+
+.support_footer {
+    position: absolute;
+    width: 73px;
+    height: 32px;
+    left: 1287px;
+    top: 24px;
+    /* Subtitle 1 */
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.005em;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+    /* Yellow 1 */
+    color: #F2C94C;
+}
+
+.leverInf_footer {
+    position: absolute;
+    left: 5.56%;
+    right: 67.5%;
+    top: 35%;
+    bottom: 35.15%;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    /* or 125% */
+    /* white */
+    color: #FFFFFF;
+}
+
+.socialNetwork_footer {
+    position: absolute;
+    width: 136px;
+    height: 32px;
+    left: 1118px;
+    top: 24px;
+}
+
+.socialNetwork_footer {
+    position: absolute;
+    width: 136px;
+    height: 32px;
+    left: 1118px;
+    top: 24px;
+    align-content: space-between;
+}
+
+.inst_footer {
+    margin: auto;
+    position: absolute;
+    left: 40px;
+}
+
+.img_inst_footer {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 0px;
+    top: 0px;
+    background: url("/assets/images/Instagram.png")
+}
+
+.tg_footer {
+    position: absolute;
+    left: 80px;
+}
+
+.img_tg_footer {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 0px;
+    top: 0px;
+    background-size: 100%;
+    background: url("/assets/images/Telegram.png")
+}
+
+.f_foorter {
+    margin: auto;
+}
+
+.img_f_foorter {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 0px;
+    top: 0px;
+    background-size: 100%;
+    /* white */
+    background: url("/assets/images/Facebook.png")
+}
